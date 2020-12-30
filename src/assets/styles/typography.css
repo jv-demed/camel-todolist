@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+span, input, button{
+    color: azure;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+}
+input{
+    color: black;
+}
