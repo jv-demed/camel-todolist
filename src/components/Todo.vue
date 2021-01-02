@@ -3,7 +3,7 @@
         <div class="content">
             <input type='checkbox' :checked='todo.checked' @click="$emit('checkTodo', index)" />
             <div class='title'>
-                <span :alt='todo.title'>{{todo.title}}</span>
+                <span contenteditable="true" :alt='todo.title'>{{todo.title}}</span>
             </div>
         </div>
         <div class="infos">
@@ -30,12 +30,15 @@
 <style scoped>
     .todo{
         border-bottom: 1px solid #706897;
-        border-radius: 0 0 5% 5%;
+        border-radius: 5%;
         display: flex;
         height: 25px;
         justify-content: space-between;
-        margin-bottom: 5px;
         padding: 0 5px;
+        padding-top: 5px;
+    }
+    .todo:hover{
+        background-color:#3d424d; /* #393e46 */
     }
     .content{
         align-items: center;
