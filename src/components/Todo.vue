@@ -47,7 +47,12 @@
     .title span{
         margin: 0 2px;
     }
+    input{
+        color: #706897;
+        cursor: pointer;
+    }
     input:checked ~ .title span{
+        opacity: 0.7;
         text-decoration: line-through 2px;
     }
 </style>

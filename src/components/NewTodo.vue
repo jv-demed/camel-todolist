@@ -38,11 +38,13 @@
         outline: none;
     }
     input{
+        border-radius: 4px 0 0 4px;
         padding: 0 10px;
         width: 480px;
     }
     button{
         background-color: #706897;
+        border-radius: 0 4px 4px 0;
         width: 50px
     }
     @media(max-width: 600px){
@@ -53,7 +55,7 @@
             height: 50px;
         }
         input{
-             width: 79.6%; /* 82.4% input, 15% button e 5.4% padding do input */
+            width: 79.6%; /* 82.4% input, 15% button e 5.4% padding do input */
         }
         button{
             width: 15%;
