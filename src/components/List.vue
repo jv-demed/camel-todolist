@@ -3,7 +3,8 @@
         <Todo v-for='(todo, index) in list' 
             :key='todo.id' 
             :todo='todo' 
-            :index='index' 
+            :index='index'
+            @checkTodo='checkTodo'
             @removeTodo='removeTodo'/>
     </div>
 </template>
@@ -30,6 +31,14 @@
             },
             removeTodo(i){
                 this.list.splice(i, 1);
+                this.save();
+            },
+            checkTodo(i){
+                if(this.list[i].checked){
+                    this.list[i].checked = false;
+                }else{
+                    this.list[i].checked = true;
+                }
                 this.save();
             },
             save(){
