@@ -29,6 +29,7 @@
 
 <style scoped>
     .newTodo{
+        display: flex;
         margin-top: 50px;
         width: 550px; /* 480 input, 50 button e 20 padding do input */
     }
@@ -61,4 +62,15 @@
             width: 15%;
         }
     }
+    /* @media(max-width: 430px){
+        .newTodo{
+            display: flex;
+        }
+        input{
+            width: 90%;
+        }
+        input{
+            margin: 0 auto;
+        }
+    } */
 </style>

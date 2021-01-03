@@ -67,11 +67,9 @@
 <style scoped>
     .todo{
         border-bottom: 1px solid #706897;
-        border-radius: 5%;
-        height: 25px;
+        border-radius: 4%;
         padding: 0 5px;
         padding-top: 5px;
-        padding-bottom: 2px;
     }
     .todo:hover{
         background-color:#3d424d; /* #393e46 */
@@ -85,10 +83,7 @@
         display: flex;
     }
     .title{
-        margin: 0 6px;
-    }
-    .title span{
-        margin: 0 2px;
+        margin: 0 8px;
     }
     input{
         cursor: pointer;
@@ -101,6 +96,24 @@
         background-color: rgba(0, 0, 0, 0);
         border: none;
         color: #706897;
-        width: 100%;
+        padding: 0 5px;
+        width: 98%;
+    }
+    @media(max-width: 600px){
+        .todo{
+            min-height: 50px;
+            padding-top: 0;
+        }
+        .item{
+            align-items: center;
+            min-height: 50px;
+        }
+        .title span{
+            font-size: 18pt;
+        }
+        .edit input{
+            font-size: 18pt;
+            height: 45px;
+        }
     }
 </style>
