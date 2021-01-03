@@ -1,3 +1,8 @@
+.pencil{
+    color: #706897;
+    cursor: pointer;
+}
 .trash{
     color: tomato;
+    cursor: pointer;
 }

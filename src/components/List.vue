@@ -5,7 +5,8 @@
             :todo='todo' 
             :index='index'
             @checkTodo='checkTodo'
-            @removeTodo='removeTodo'/>
+            @removeTodo='removeTodo'
+            @editTodo='editTodo'/>
     </div>
 </template>
 
@@ -24,14 +25,12 @@
         },
         methods:{
             addTodo(todo){
-                if(todo){
+                if(todo.title){
                     this.list.unshift(todo);
-                    this.save();
                 }
             },
             removeTodo(i){
                 this.list.splice(i, 1);
-                this.save();
             },
             checkTodo(i){
                 if(this.list[i].checked){
@@ -41,12 +40,20 @@
                 }
                 this.save();
             },
+            editTodo(obj){
+                this.list[obj.index].id = Date.now();
+                this.list[obj.index].title = obj.newTitle;
+                this.save();
+            },
             save(){
                 localStorage.setItem('camelTodo', JSON.stringify(this.list));
             }
         },
         mounted(){
             eventBus.$on('addTodo', (todo)=> this.addTodo(todo));
+        },
+        updated(){
+            this.save()
         }
     }
 </script>
